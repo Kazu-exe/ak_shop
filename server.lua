@@ -8,7 +8,7 @@ AddEventHandler('powx_tuto:BuyPain', function()
 
     local _source = source
     local xPlayer = ESX.GetPlayerFromId(source)
-    local price = 5
+    local price = 1
     local xMoney = xPlayer.getMoney()
 
     if xMoney >= price then
@@ -28,7 +28,7 @@ AddEventHandler('powx_tuto:BuyEau', function()
 
     local _source = source
     local xPlayer = ESX.GetPlayerFromId(source)
-    local price = 5
+    local price = 1
     local xMoney = xPlayer.getMoney()
 
     if xMoney >= price then
