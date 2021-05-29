@@ -10,6 +10,7 @@ end)
 RMenu.Add('shop', 'main', RageUI.CreateMenu("Épicerie", "~b~Menu Boutique~w~"))
 RMenu.Add('shop', 'boisson', RageUI.CreateSubMenu(RMenu:Get('shop', 'main'), "Boisson", "~b~Menu Boisson~w~"))
 RMenu.Add('shop', 'nourriture', RageUI.CreateSubMenu(RMenu:Get('shop', 'main'), "Nourriture", "~b~Menu Nourriture~w~"))
+RMenu.Add('shop', 'divers', RageUI.CreateSubMenu(RMenu:Get('shop', 'main'), "Divers", "~b~Menu Divers~w~"))
 
 Citizen.CreateThread(function()
     while true do
@@ -17,6 +18,9 @@ Citizen.CreateThread(function()
 
             RageUI.Button("Boisson", "Choisi ta Boisson !", {RightLabel = "→→→"},true, function()
             end, RMenu:Get('shop', 'boisson'))
+
+            RageUI.Button("Divers", "Choisi ton Telephone !", {RightLabel = "→→→"},true, function()
+            end, RMenu:Get('shop', 'divers'))
 
             RageUI.Button("Nourriture", "Choisi ta Nourriture !", {RightLabel = "→→→"},true, function()
             end, RMenu:Get('shop', 'nourriture'))
@@ -26,6 +30,39 @@ Citizen.CreateThread(function()
         RageUI.IsVisible(RMenu:Get('shop', 'boisson'), true, true, true, function()
 
             RageUI.Button("Eau 🥤", "Voici de l'eau fraiche", {RightLabel = "~r~1$"}, true, function(Hovered, Active, Selected)
+                if (Selected) then
+                    TriggerServerEvent('powx_tuto:BuyEau')
+                end
+            end)
+        end, function()
+        end)
+
+        RageUI.IsVisible(RMenu:Get('shop', 'divers'), true, true, true, function()
+
+            RageUI.Button("Telephone 📱", "Voici ton Télephone", {RightLabel = "~r~100$"}, true, function(Hovered, Active, Selected)
+                if (Selected) then
+                    TriggerServerEvent('powx_tuto:BuyTelephone')
+                end
+            end)
+        end, function()
+        end)
+
+        RageUI.IsVisible(RMenu:Get('shop', 'main'), true, true, true, function()
+
+            RageUI.Button("Boisson", "Choisi ta Boisson !", {RightLabel = "→→→"},true, function()
+            end, RMenu:Get('shop', 'boisson'))
+
+            RageUI.Button("Divers", "Choisi ton Telephone !", {RightLabel = "→→→"},true, function()
+            end, RMenu:Get('shop', 'divers'))
+
+            RageUI.Button("Nourriture", "Choisi ta Nourriture !", {RightLabel = "→→→"},true, function()
+            end, RMenu:Get('shop', 'nourriture'))
+        end, function()
+        end)
+
+        RageUI.IsVisible(RMenu:Get('shop', 'divers'), true, true, true, function()
+
+            RageUI.Button("Telephone 📱", "", {RightLabel = "~r~100$"}, true, function(Hovered, Active, Selected)
                 if (Selected) then
                     TriggerServerEvent('powx_tuto:BuyEau')
                 end
