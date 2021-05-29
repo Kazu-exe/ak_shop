@@ -19,7 +19,7 @@ Citizen.CreateThread(function()
             RageUI.Button("Boisson", "Choisi ta Boisson !", {RightLabel = "→→→"},true, function()
             end, RMenu:Get('shop', 'boisson'))
 
-            RageUI.Button("Divers", "Choisi ton Telephone !", {RightLabel = "→→→"},true, function()
+            RageUI.Button("Divers", "Choisi ton Télephone !", {RightLabel = "→→→"},true, function()
             end, RMenu:Get('shop', 'divers'))
 
             RageUI.Button("Nourriture", "Choisi ta Nourriture !", {RightLabel = "→→→"},true, function()
@@ -39,9 +39,9 @@ Citizen.CreateThread(function()
 
         RageUI.IsVisible(RMenu:Get('shop', 'divers'), true, true, true, function()
 
-            RageUI.Button("Telephone 📱", "Voici ton Télephone", {RightLabel = "~r~100$"}, true, function(Hovered, Active, Selected)
+            RageUI.Button("Télephone 📱", "Voici ton Télephone", {RightLabel = "~r~100$"}, true, function(Hovered, Active, Selected)
                 if (Selected) then
-                    TriggerServerEvent('powx_tuto:BuyTelephone')
+                    TriggerServerEvent('powx_tuto:BuyTélephone')
                 end
             end)
         end, function()
@@ -52,7 +52,7 @@ Citizen.CreateThread(function()
             RageUI.Button("Boisson", "Choisi ta Boisson !", {RightLabel = "→→→"},true, function()
             end, RMenu:Get('shop', 'boisson'))
 
-            RageUI.Button("Divers", "Choisi ton Telephone !", {RightLabel = "→→→"},true, function()
+            RageUI.Button("Divers", "Choisi ton Télephone !", {RightLabel = "→→→"},true, function()
             end, RMenu:Get('shop', 'divers'))
 
             RageUI.Button("Nourriture", "Choisi ta Nourriture !", {RightLabel = "→→→"},true, function()
@@ -62,7 +62,7 @@ Citizen.CreateThread(function()
 
         RageUI.IsVisible(RMenu:Get('shop', 'divers'), true, true, true, function()
 
-            RageUI.Button("Telephone 📱", "", {RightLabel = "~r~100$"}, true, function(Hovered, Active, Selected)
+            RageUI.Button("Télephone 📱", "", {RightLabel = "~r~100$"}, true, function(Hovered, Active, Selected)
                 if (Selected) then
                     TriggerServerEvent('powx_tuto:BuyEau')
                 end
@@ -144,7 +144,7 @@ Citizen.CreateThread(function()
             info.blip = AddBlipForCoord(info.x, info.y, info.z)
             SetBlipSprite(info.blip, 52)
             SetBlipDisplay(info.blip, 4)
-            SetBlipScale(info.blip, 0.7)
+            SetBlipScale(info.blip, 0.6)
             SetBlipColour(info.blip, info.colour)
             SetBlipAsShortRange(info.blip, true)
             BeginTextCommandSetBlipName("STRING")
