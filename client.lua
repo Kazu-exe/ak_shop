@@ -8,8 +8,8 @@ Citizen.CreateThread(function()
 end)
 
 RMenu.Add('shop', 'main', RageUI.CreateMenu("Épicerie", "~b~Menu Boutique~w~"))
-RMenu.Add('shop', 'boisson', RageUI.CreateSubMenu(RMenu:Get('shop', 'main'), "Boisson", "Menu Boisson"))
-RMenu.Add('shop', 'nourriture', RageUI.CreateSubMenu(RMenu:Get('shop', 'main'), "Nourriture", "Menu Nourriture"))
+RMenu.Add('shop', 'boisson', RageUI.CreateSubMenu(RMenu:Get('shop', 'main'), "Boisson", "~b~Menu Boisson~w~"))
+RMenu.Add('shop', 'nourriture', RageUI.CreateSubMenu(RMenu:Get('shop', 'main'), "Nourriture", "~b~Menu Nourriture~w~"))
 
 Citizen.CreateThread(function()
     while true do
@@ -25,7 +25,7 @@ Citizen.CreateThread(function()
 
         RageUI.IsVisible(RMenu:Get('shop', 'boisson'), true, true, true, function()
 
-            RageUI.Button("Eau 🥤", "Voici de l'eau fraiche", {RightLabel = "~g~5$"}, true, function(Hovered, Active, Selected)
+            RageUI.Button("Eau 🥤", "Voici de l'eau fraiche", {RightLabel = "~r~1$"}, true, function(Hovered, Active, Selected)
                 if (Selected) then
                     TriggerServerEvent('powx_tuto:BuyEau')
                 end
@@ -35,7 +35,7 @@ Citizen.CreateThread(function()
 
             RageUI.IsVisible(RMenu:Get('shop', 'nourriture'), true, true, true, function()
 
-                RageUI.Button("Pain 🍞", "Voici du pain frais", {RightLabel = "~g~5$"}, true, function(Hovered, Active, Selected)
+                RageUI.Button("Pain 🍞", "Voici du pain frais", {RightLabel = "~r~1$"}, true, function(Hovered, Active, Selected)
                     if (Selected) then
                         TriggerServerEvent('powx_tuto:BuyPain')
                     end
