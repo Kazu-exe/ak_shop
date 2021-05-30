@@ -121,8 +121,10 @@ Citizen.CreateThread(function()
     
                 if dist <= 1.0 then
 
-                   ESX.ShowHelpNotification("Appuyez sur [~b~E~w~] pour parler a ~b~Apu")
-
+                    RageUI.Text({
+                        message = "Appuyez sur [~b~E~w~] pour acceder au ~b~Shop",
+                        time_display = 1
+                    })
                     if IsControlJustPressed(1,51) then
                         RageUI.Visible(RMenu:Get('shop', 'main'), not RageUI.Visible(RMenu:Get('shop', 'main')))
                     end
