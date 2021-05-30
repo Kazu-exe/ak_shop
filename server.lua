@@ -43,8 +43,8 @@ end)
 
 
 
-RegisterNetEvent('powx_tuto:BuyTelephone')
-AddEventHandler('powx_tuto:BuyTelephone', function()
+RegisterNetEvent('powx_tuto:BuyTélephone')
+AddEventHandler('powx_tuto:BuyTélephone', function()
 
     local _source = source
     local xPlayer = ESX.GetPlayerFromId(source)
