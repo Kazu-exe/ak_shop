@@ -121,10 +121,10 @@ Citizen.CreateThread(function()
     
                 if dist <= 1.0 then
 
-                   ESX.ShowHelpNotification("Appuyez sur [~b~E~w~] pour parler a~b~Apu")
+                   ESX.ShowHelpNotification("Appuyez sur [~b~E~w~] pour parler a ~b~Apu")
 
                     if IsControlJustPressed(1,51) then
-                        RageUI.Visible(RMenu:Get('Modeo', 'main'), not RageUI.Visible(RMenu:Get('Modeo', 'main')))
+                        RageUI.Visible(RMenu:Get('shop', 'main'), not RageUI.Visible(RMenu:Get('shop', 'main')))
                     end
                 end
             end
